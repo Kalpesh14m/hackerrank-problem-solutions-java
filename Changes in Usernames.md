@@ -1,30 +1,35 @@
 ## Algorithms/Data Structures
+
 There is a Specific Need for Changes in a List of Usernames. In a given List of Usernames — For Each Username — If the Username can be Modified and Moved Ahead in a Dictionary. The Allowed Modification is that Alphabets can change Positions in the Given Username.
 
 ### Example
-```usernames[] = {"Aba", "Cat"}```
+
+`usernames[] = {"Aba", "Cat"}`
  
 "Aba" can be Changed to only "Baa" — Hence, It can Never Find a Place Ahead in the Dictionary. Hence, Output will be "NO". "Cat" can be Changed to "Act", "Atc", "Tca", "Tac", "Cta" and Definitely "Act" will Find a Place Before "Cat" in the Dictionary. Hence, Output will be "YES".
 
-[Function Description]
+### [Function Description]
+
 Complete the function possibleChanges in the Editor Below.
  
-possibleChanges has the Following Parameters:
-String usernames[n]: An Array of User Names
- 
-Returns String[n]: An Array with "YES" or "NO" Based on Feasibility
+- possibleChanges has the Following Parameters:
+- String usernames[n]: An Array of User Names 
+- Returns String[n]: An Array with "YES" or "NO" Based on Feasibility
 (Actual Question Says String Array, But Signature is List of Strings)
 
 
-Constraints
+### Constraints
 • [No Special Constraints Exist, But Cannot Recall Exactly]
 
 
-Input Format 
+### Input Format 
+```
 "The First Line Contains an Integer, n, the Number of Elements in Usernames.",
 "Each Line of the n Subsequent Lines (where 0 < i < n) contains a String usernames[i]."        
+```
 
-[Sample Case 0 — Sample Input For Custom Testing]         
+### [Sample Case 0 — Sample Input For Custom Testing]         
+```
 5
 Aba
 Cat
@@ -34,12 +39,14 @@ Bapg
 Sungi
 Lapg
 Acba
-       
-Sample Output (Each Should Be on a Separate Line) 
-NO YES NO YES YES YES YES YES
+```
+
+### Sample Output (Each Should Be on a Separate Line) 
+`NO YES NO YES YES YES YES YES`
    
  
-[Explanation of the Solution]
+### [Explanation of the Solution]
+
 This is again a Good Question from Hacker Rank to Test Your Logic / Problem Solving Abilities. The Core Point to Handle is that For Each Combination of 2 Alphabets that Exists in the Username String > We Need to Check if the Latter Occurring Character (ASCII) is Less than the Former Occurring Character (ASCII). For Example in the String "Bapg" — For a Selection of "Ba" from "Bapg" — We have "a" Occurring Before "B" in the English Alphabet. We can Have Two Loops (One Nested) to Decide for a Combination of Each Two Alphabets. The Time Complexity of this Solution is O(n^2).
 
 
